@@ -44,12 +44,27 @@ body::after {
 }
 
 @keyframes animate {
-  0% {
+  0%,
+  100% {
     transform: translateY(10px);
   }
   50% {
     transform: translateY(-10px);
   }
+}
+
+.container {
+  position: relative;
+}
+
+.container::before {
+  content: " ";
+  position: absolute;
+  bottom: -100px;
+  width: 100%;
+  height: 60px;
+  background: radial-gradient(rgba(0, 0, 0, 0.2), transparent, transparent);
+  border-radius: 50%;
 }
 
 .box {
