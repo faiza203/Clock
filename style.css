@@ -51,3 +51,15 @@ body::after {
     transform: translateY(-10px);
   }
 }
+
+.box {
+  position: relative;
+  z-index: 1;
+  width: 400px;
+  height: 400px;
+  backdrop-filter: blur(25px);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  animation: animate 5s ease-in-out infinite;
+  animation-delay: -2.5s;
+}
