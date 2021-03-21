@@ -26,19 +26,28 @@ body::before {
   );
 }
 
-
 body::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(
-      160deg,
-      #03a9f4,
-      #03a9f4 50%,
-      transparent 50%,
-      transparent
-    );
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    160deg,
+    #03a9f4,
+    #03a9f4 50%,
+    transparent 50%,
+    transparent
+  );
+  animation: animate 5s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(10px);
   }
+  50% {
+    transform: translateY(-10px);
+  }
+}
