@@ -99,3 +99,33 @@ body::after {
   box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.1),
     10px 10px 20px rgba(0, 0, 0, 0.1), 0 40px 50px rgba(0, 0, 0, 0.2);
 }
+.clock::before {
+  content: " ";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 10000;
+}
+
+.hour,
+.min,
+.sec {
+  position: absolute;
+}
+
+.hour .hr {
+  width: 160px;
+  height: 160px;
+}
+
+.min .mn {
+  width: 190px;
+  height: 190px;
+}
+
+.sec .sc {
+  width: 230px;
+  height: 230px;
+}
