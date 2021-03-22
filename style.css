@@ -147,3 +147,13 @@ body::after {
   border-radius: 6px;
   z-index: 11;
 }
+
+.mn::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background: #fff;
+  border-radius: 6px;
+  z-index: 12;
+}
