@@ -129,3 +129,21 @@ body::after {
   width: 230px;
   height: 230px;
 }
+
+.hr,
+.mn,
+.sc {
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.hr::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background: #ff105e;
+  border-radius: 6px;
+  z-index: 11;
+}
