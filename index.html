@@ -27,16 +27,16 @@
   <script>
     const deg = 6;
     const hr = document.getElementById("hr");
-    const mn = document.getElementById("mn");
-    const sc = document.getElementById("sc");
+    const mn = document.querySelector("mn");
+    const sc = document.querySelector("#sc");
     setInterval(() => {
       const day = new Date();
       const hh = day.getHours() * 30;
-      const mm = day.getMinutes() * deg;
-      const ss = day.getSeconds() * deg;
+      const mm = day.getHours() * deg;
+      const ss = day.getHours() * deg;
 
       hr.style.transform = `rotateZ(${hh + mm / 12}deg)`;
-      mn.style.transform = `rotateZ(${mm}deg)`;
+      mm.style.transform = `rotateZ(${mm}deg)`;
       sc.style.transform = `rotateZ(${ss}deg)`;
     });
   </script>
