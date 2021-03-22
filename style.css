@@ -157,3 +157,13 @@ body::after {
   border-radius: 6px;
   z-index: 12;
 }
+
+.sc::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background: #fff;
+  border-radius: 6px;
+  z-index: 12;
+}
