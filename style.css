@@ -117,17 +117,17 @@ body::after {
 
 .hour .hr {
   width: 160px;
-  height: 160px;
+  height: 155px;
 }
 
 .min .mn {
   width: 190px;
-  height: 190px;
+  height: 175px;
 }
 
 .sec .sc {
   width: 230px;
-  height: 230px;
+  height: 220px;
 }
 
 .hr,
@@ -162,8 +162,66 @@ body::after {
   content: "";
   position: absolute;
   width: 2px;
-  height: 150px;
+  height: 110px;
   background: #fff;
   border-radius: 6px;
   z-index: 12;
+}
+
+@media (max-width: 700px) {
+  .box {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hr::before {
+    height: 70px;
+  }
+  .hour .hr {
+    height: 130px;
+  }
+  .mn::before {
+    height: 70px;
+  }
+
+  .min .mn {
+    height: 140px;
+  }
+
+  .sc::before {
+    height: 75px;
+  }
+
+  .sec .sc {
+    height: 160px;
+  }
+}
+
+@media (max-width: 400px) {
+  .box {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hr::before {
+    height: 35px;
+  }
+  .hour .hr {
+    height: 80px;
+  }
+  .mn::before {
+    height: 45px;
+  }
+
+  .min .mn {
+    height: 85px;
+  }
+
+  .sc::before {
+    height: 55px;
+  }
+
+  .sec .sc {
+    height: 100px;
+  }
 }
