@@ -19,4 +19,15 @@
       </div>
     </div>
   </body>
+  <script>
+    const hour = document.querySelector(".hour");
+    const min = document.querySelector(".min");
+    const sec = document.querySelector(".sec");
+    const time = document.querySelector(".time");
+    const date = new Date();
+    hour.innerText = date.getHours();
+    min.innerText = date.getMinutes();
+    sec.innerText = date.getSeconds();
+    // hour.innerText = date.getHours();
+  </script>
 </html>
