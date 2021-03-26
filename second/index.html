@@ -24,8 +24,8 @@
     const min = document.querySelector(".min");
     const sec = document.querySelector(".sec");
     const time = document.querySelector(".time");
-    const date = new Date();
     setInterval(() => {
+      const date = new Date();
       date.getHours() > 10
         ? (hour.innerText = date.getHours())
         : (hour.innerText = "0" + date.getHours());
@@ -39,6 +39,6 @@
       date.getSeconds() > 10
         ? (sec.innerText = date.getSeconds())
         : (sec.innerText = "0" + date.getSeconds());
-    });
+    }, 1000);
   </script>
 </html>
