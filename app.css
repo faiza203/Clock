@@ -1,9 +1,33 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body {
+body{
+    background-color: rgba(0, 0, 0 , 0.8);
+}
+
+body::before {
+  content: "";
+  top: 10%;
+  left: 20%;
+  position: absolute;
+  width: 15em;
+  height: 15em;
+  background-image: linear-gradient(yellow, orange);
+}
+body::after {
+  content: "";
+  bottom: 10%;
+  right: 20%;
+  position: absolute;
+  width: 15em;
+  height: 15em;
+  background-image: linear-gradient(skyblue, blue);
+}
+
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
