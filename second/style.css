@@ -8,26 +8,25 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-body::before {
+body::before,
+.container::before {
   content: "";
-  top: 10%;
-  right: 20%;
   position: absolute;
   width: 15em;
   height: 15em;
-  background-image: linear-gradient(yellow, orangered);
   border-radius: 5px;
+}
+
+body::before {
+  top: 10%;
+  right: 20%;
+  background-image: linear-gradient(yellow, orangered);
   animation: rotate2 5s infinite ease-in;
 }
 .container::before {
-  content: "";
   bottom: 10%;
   left: 20%;
-  position: absolute;
-  width: 15em;
-  height: 15em;
   background-image: linear-gradient(skyblue, blue);
-  border-radius: 5px;
   animation: rotate1 5s infinite ease-in;
 }
 
@@ -83,5 +82,34 @@ body::before {
   }
   100% {
     top: 10%;
+  }
+}
+
+@media (max-width: 900px) {
+  .container::before,
+  body::before {
+    height: 10em;
+    width: 10em;
+  }
+}
+
+@media (max-width: 500px) {
+  .clock {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 360px) {
+  .container::before,
+  body::before {
+    height: 8em;
+    width: 8em;
+  }
+  .clock {
+    font-size: 1em;
+  }
+  .clock p {
+    padding: 0 5px;
+    margin: 0 3px;
   }
 }
