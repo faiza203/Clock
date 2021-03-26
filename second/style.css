@@ -93,7 +93,7 @@ body::before {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .clock {
     font-size: 2em;
   }
