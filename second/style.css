@@ -17,6 +17,7 @@ body::before {
   height: 15em;
   background-image: linear-gradient(yellow, orangered);
   border-radius: 5px;
+  animation: rotate2 5s infinite ease-in;
 }
 .container::before {
   content: "";
@@ -27,6 +28,7 @@ body::before {
   height: 15em;
   background-image: linear-gradient(skyblue, blue);
   border-radius: 5px;
+  animation: rotate1 5s infinite ease-in;
 }
 
 .container {
@@ -59,4 +61,27 @@ body::before {
   margin: 0 5px;
   box-shadow: 2px 2px 12px dimgrey;
   border-radius: 5px;
+}
+
+@keyframes rotate1 {
+  0% {
+    bottom: 10%;
+  }
+  50% {
+    bottom: 15%;
+  }
+  100% {
+    bottom: 10%;
+  }
+}
+@keyframes rotate2 {
+  0% {
+    top: 10%;
+  }
+  50% {
+    top: 15%;
+  }
+  100% {
+    top: 10%;
+  }
 }
