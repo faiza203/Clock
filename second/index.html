@@ -26,17 +26,17 @@
     const time = document.querySelector(".time");
     setInterval(() => {
       const date = new Date();
-      date.getHours() > 10
+      date.getHours() >= 10
         ? (hour.innerText = date.getHours())
         : (hour.innerText = "0" + date.getHours());
 
-      date.getMinutes() > 10
+      date.getMinutes() >= 10
         ? (min.innerText = date.getMinutes())
         : (min.innerText = "0" + date.getMinutes());
-      date.getSeconds() > 12
+      date.getSeconds() >= 12
         ? (time.innerText = "AM")
         : (time.innerText = "PM");
-      date.getSeconds() > 10
+      date.getSeconds() >= 10
         ? (sec.innerText = date.getSeconds())
         : (sec.innerText = "0" + date.getSeconds());
     }, 1000);
